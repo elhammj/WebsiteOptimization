@@ -448,15 +448,15 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
 // Moves the sliding background pizzas based on scroll position
 //Declear item outside the function to reduce script time
-var items;
+var items = document.getElementsByClassName("mover");
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
-  items = document.getElementsByClassName("mover"); //replace querySelectorAll by getElementsByClassName
-  var partOfPhase = document.body.scrollTop / 1250;
-  for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin(partOfPhase + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  var partOfPhase = scrollTop / 1250;
+  for (var j = 0; j < items.length; j++) {
+    var phase = Math.sin(partOfPhase + (j % 5));
+    items[j].style.left = items[j].basicLeft + 100 * phase + 'px';
   }
   // User Timing API to the rescue again. Seriously, it's worth learning.
   // Super easy to create custom metrics.
@@ -474,8 +474,8 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  //add number of pizza to display instead of 200, depending to the screen size. 
-  var slidPizzas = Math.ceil(screen.width / s) * cols;
+  //add number of pizza to display instead of 200, depending to the screen size (height). 
+  var slidPizzas = Math.round(screen.height / s) * cols;
   var newPizzaToAppend = document.getElementById("movingPizzas1");
   //Declare once
   var elem;
