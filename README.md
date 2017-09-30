@@ -35,8 +35,8 @@ You can access the project online by visiting [https://elhammj.github.io/Website
 * Optimize iamges and resize them. 
 
 The score from google PageSpeed Insight now is above 90:
-<img src="img/githubdesktop.png">
-<img src="img/githubmobile.png">
+<img src="img/githubdesktop.png" width="100" height="100">
+<img src="img/githubmobile.png" width="100" height="100">
 
 ### In main.js
 
@@ -58,7 +58,7 @@ The score from google PageSpeed Insight now is above 90:
   	 
 * Improve number of displaying moving pizzas instead of iterating 200 times, the pizzas will be displayed depending on the screen size (height).
 
-		`var slidPizzas = Math.round(screen.height / s) * cols;`
+`var slidPizzas = Math.round(screen.height / s) * cols;`
 		
 * Declare elem variable once outside the loop and item variable once outside the funtion to reduce the script time. 
 	
@@ -68,8 +68,8 @@ The score from google PageSpeed Insight now is above 90:
 * Replace the querySelector with getElementById and querySelectorAll with getElementById.
 * Remove the determinDx function and keep the sizeSwitcher function. 
 
-<img src="img/resizeFromTool.png" style="width:200px; height:100px;">
-<img src="img/resizeFromConsole.png" style="width:100px height:50px;">
+<img src="img/resizeFromTool.png" width="200" height="100">
+<img src="img/resizeFromConsole.png" width="100" height="20">
 
 
 #### Extra Work:
