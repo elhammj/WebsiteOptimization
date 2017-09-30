@@ -70,7 +70,7 @@ The score from google PageSpeed Insight now is above 90:
 * Remove the determinDx function and keep the sizeSwitcher function. 
 
 <img src="img/resizeFromTool.png" width="500" height="300">
-<img src="img/resizeFromConsole.png" width="300" height="100">
+<img src="img/resizeFromConsole.png" width="400" height="100">
 
 
 #### Extra Work:
