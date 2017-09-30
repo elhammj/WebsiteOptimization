@@ -35,8 +35,8 @@ You can access the project online by visiting [https://elhammj.github.io/Website
 * Optimize iamges and resize them. 
 
 The score from google PageSpeed Insight now is above 90:
-<img src="img/githubdesktop.png" style="max-width:100px; max-height:100px;">
-<img src="img/githubmobile.png" style="max-width:100px; max-height:100px;">
+<img src="img/githubdesktop.png" style="max-width:50px; max-height:50px;">
+<img src="img/githubmobile.png" style="max-width:50px; max-height:50px;">
 
 ### In main.js
 
@@ -46,14 +46,14 @@ The score from google PageSpeed Insight now is above 90:
 	'var pizzasDiv = document.getElementById("randomPizzas");' 
 * Replace the querySelector to getElementByID and getSelectorAll by getElementsByClassName.
 * Optimize the calculation in updatePositions()
-	'var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //In order to make it work with different browser
-	var partOfPhase = scrollTop / 1250; //calculate once outside the loop
-	for (var j = 0; j < items.length; j++) {
-		var phase = Math.sin(partOfPhase + (j % 5));
-    	items[j].style.left = items[j].basicLeft + 100 * phase + 'px';
-  	}'
+	`var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //In order to make it work with different browser`
+	`var partOfPhase = scrollTop / 1250; //calculate once outside the loop`
+	`for (var j = 0; j < items.length; j++) {`
+		`var phase = Math.sin(partOfPhase + (j % 5));`
+    	`items[j].style.left = items[j].basicLeft + 100 * phase + 'px';`
+  	`}`
 * Improve number of displaying moving pizzas instead of iterating 200 times, the pizzas will be displayed depending on the screen size (height).
-		var slidPizzas = Math.round(screen.height / s) * cols;
+		`var slidPizzas = Math.round(screen.height / s) * cols;`
 * Declare elem variable once outside the loop and item variable once outside the funtion to reduce the script time. 
 	
 #### In order to resize pizza in less than 5ms:
