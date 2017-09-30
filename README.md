@@ -47,12 +47,14 @@ The score from google PageSpeed Insight now is above 90:
 * Replace the querySelector to getElementByID and getSelectorAll by getElementsByClassName.
 * Optimize the calculation in updatePositions().
 
-	```var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //In order to make it work with different browser
-	 var partOfPhase = scrollTop / 1250; //calculate once outside the loop
-	 for (var j = 0; j < items.length; j++) {
-		 var phase = Math.sin(partOfPhase + (j % 5));
-    	 items[j].style.left = items[j].basicLeft + 100 * phase + 'px';
-  	 }```
+```
+   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //In order to make it work with different browser
+   var partOfPhase = scrollTop / 1250; //calculate once outside the loop
+   for (var j = 0; j < items.length; j++) {
+       var phase = Math.sin(partOfPhase + (j % 5));
+       items[j].style.left = items[j].basicLeft + 100 * phase + 'px';
+   }
+```
   	 
 * Improve number of displaying moving pizzas instead of iterating 200 times, the pizzas will be displayed depending on the screen size (height).
 
