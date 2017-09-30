@@ -35,8 +35,9 @@ You can access the project online by visiting [https://elhammj.github.io/Website
 * Optimize iamges and resize them. 
 
 The score from google PageSpeed Insight now is above 90:
-<img src="img/githubdesktop.png" width="100" height="100">
-<img src="img/githubmobile.png" width="100" height="100">
+
+<img src="img/githubdesktop.png" width="300" height="300">
+<img src="img/githubmobile.png" width="300" height="300">
 
 ### In main.js
 
@@ -68,8 +69,8 @@ The score from google PageSpeed Insight now is above 90:
 * Replace the querySelector with getElementById and querySelectorAll with getElementById.
 * Remove the determinDx function and keep the sizeSwitcher function. 
 
-<img src="img/resizeFromTool.png" width="200" height="100">
-<img src="img/resizeFromConsole.png" width="100" height="20">
+<img src="img/resizeFromTool.png" width="300" height="200">
+<img src="img/resizeFromConsole.png" width="200" height="50">
 
 
 #### Extra Work:
