@@ -18,29 +18,29 @@ You can access the project online by visiting [https://elhammj.github.io/Website
 
 #### In index.html
 
-1- 	Render Blocking Javascript. 
+1. 	Render Blocking Javascript. 
 	
 * Move the script part to the end of the file. 
 * Add async word to javascript external file calling (perfmatters.js) and google analytics link. 
 * Use Web Font Loader javascript to optimize google font part [webfotnloader](https://github.com/typekit/webfontloader). 
 		
-2- Render Blocking CSS. 
+2. Render Blocking CSS. 
 	
 * Inline style.css
 * Add media query to the print.css link. Media=print. 
 		
-3- Image Optimization. 
+3. Image Optimization. 
 	
 * Download images from the external links that were provided.
 * Optimize iamges and resize them. 
 
 The score from google PageSpeed Insight now is above 90:
-<img src="img/githubdesktop.png" style="width:100px; height:100px;">
-<img src="img/githubmobile.png" style="width:100px height:100px;">
+<img src="img/githubdesktop.png" style="max-width:100px; max-height:100px;">
+<img src="img/githubmobile.png" style="max-width:100px; max-height:100px;">
 
 ### In main.js
 
-#####In order to reach 60FPS these steps have been applied:
+#### In order to reach 60FPS these steps have been applied:
 	
 * Put the pizzaDiv line outside the loop to reduce the number of executing this line. 
 	var pizzasDiv = document.getElementById("randomPizzas"); 
@@ -56,7 +56,7 @@ The score from google PageSpeed Insight now is above 90:
 		var slidPizzas = Math.round(screen.height / s) * cols;
 * Declare elem variable once outside the loop and item variable once outside the funtion to reduce the script time. 
 	
-#####In order to resize pizza in less than 5ms:
+#### In order to resize pizza in less than 5ms:
 	
 * Reduce the number of using offsetWidth inside changePizzaSizes function.
 * Replace the querySelector with getElementById and querySelectorAll with getElementById.
@@ -66,7 +66,7 @@ The score from google PageSpeed Insight now is above 90:
 <img src="img/resizeFromConsole.png" style="width:100px height:50px;">
 
 
-#####Extra Work:
+#### Extra Work:
 	
 * Inline style.css in pizza.html to optimize the script. 
 * Rearrange the project folders so now all the images under img directory, all javascript files under js directory and all CSS sheets under css directory. 
